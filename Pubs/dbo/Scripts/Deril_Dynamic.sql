@@ -10,7 +10,7 @@ EXEC sp_executesql @sql
 
 EXEC sp_GetGuids 5, 1, 1, 0
 
-ALTER PROCEDURE sp_GetGuids
+ALTER PROCEDURE sp_GetGuidss
 (
    @GuidCount INT,
    @IsUpper BIT,
