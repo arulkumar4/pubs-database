@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>Pubs</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{ef49d425-93e3-4c9a-986f-f060719e8b12}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>Pubs</RootNamespace>
+    <AssemblyName>Pubs</AssemblyName>
+    <ModelCollation>1033,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>SQL_Latin1_General_CP1_CI_AS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="dbo\Views\" />
+    <Folder Include="dbo\Stored Procedures\" />
+    <Folder Include="dbo\User Defined Types\" />
+    <Folder Include="dbo\Scripts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\authors.sql" />
+    <Build Include="dbo\Tables\publishers.sql" />
+    <Build Include="dbo\Tables\titles.sql" />
+    <Build Include="dbo\Tables\titleauthor.sql" />
+    <Build Include="dbo\Tables\stores.sql" />
+    <Build Include="dbo\Tables\sales.sql" />
+    <Build Include="dbo\Tables\roysched.sql" />
+    <Build Include="dbo\Tables\discounts.sql" />
+    <Build Include="dbo\Tables\jobs.sql" />
+    <Build Include="dbo\Tables\pub_info.sql" />
+    <Build Include="dbo\Tables\employee.sql" />
+    <Build Include="dbo\Tables\emp.sql" />
+    <Build Include="dbo\Tables\tbluser.sql" />
+    <Build Include="dbo\Views\titleview.sql" />
+    <Build Include="dbo\Stored Procedures\maximun_soldBook.sql" />
+    <Build Include="dbo\Stored Procedures\delete_it.sql" />
+    <Build Include="dbo\Stored Procedures\proc_loginn.sql" />
+    <Build Include="dbo\Stored Procedures\proc_GetAllUsers.sql" />
+    <Build Include="dbo\Stored Procedures\proc_insertvalues.sql" />
+    <Build Include="dbo\Stored Procedures\COUNT_STRING.sql" />
+    <Build Include="dbo\Stored Procedures\Get_Authorname.sql" />
+    <Build Include="dbo\Stored Procedures\Get_details.sql" />
+    <Build Include="dbo\Stored Procedures\sp_GetGuids.sql" />
+    <Build Include="dbo\Stored Procedures\proc_cal.sql" />
+    <Build Include="dbo\Stored Procedures\Get_allauthors.sql" />
+    <Build Include="dbo\Stored Procedures\Update_Authorname.sql" />
+    <Build Include="dbo\Stored Procedures\proc_InsertStore.sql" />
+    <Build Include="dbo\Stored Procedures\proc_GetAllStores.sql" />
+    <Build Include="dbo\Stored Procedures\byroyalty.sql" />
+    <Build Include="dbo\Stored Procedures\reptq1.sql" />
+    <Build Include="dbo\Stored Procedures\reptq2.sql" />
+    <Build Include="dbo\Stored Procedures\reptq3.sql" />
+    <Build Include="dbo\Stored Procedures\proc_login.sql" />
+    <Build Include="dbo\Stored Procedures\Get_All_Author.sql" />
+    <Build Include="dbo\Stored Procedures\proc_UpdateAuthors.sql" />
+    <Build Include="dbo\Stored Procedures\proc_getfullname.sql" />
+    <Build Include="dbo\Stored Procedures\proc_updatesales.sql" />
+    <Build Include="dbo\Stored Procedures\doassignment.sql" />
+    <Build Include="dbo\Stored Procedures\doassignment1.sql" />
+    <Build Include="dbo\Stored Procedures\proc_makeit.sql" />
+    <Build Include="dbo\Stored Procedures\get_sumofprice.sql" />
+    <Build Include="dbo\Stored Procedures\proc_quantitysold.sql" />
+    <Build Include="dbo\Stored Procedures\proc_quantitysold1.sql" />
+    <Build Include="dbo\Stored Procedures\Increase.sql" />
+    <Build Include="dbo\User Defined Types\id.sql" />
+    <Build Include="dbo\User Defined Types\tid.sql" />
+    <Build Include="dbo\User Defined Types\empid.sql" />
+  </ItemGroup>
+</Project>
