@@ -62,12 +62,12 @@ DECLARE @count As Int=0
 DECLARE @i As Int=0
 DECLARE @value As varchar(70)
 SET @value='ADKJFDJJFIRAIJFGIJRIOJOAJDFOJAEROWEAJVOJOERUKYUJTJAFBGFBFVFRBRT'
-while(@i<len(@value))
-begin
-if(select SUBSTRING(@value,@i,1))='A'
-begin
-set @count+=1
-end
-set @i+=1
-end
-select @count
+WHILE(@i<len(@value))
+	BEGIN
+		IF(SELECT SUBSTRING(@value,@i,1))='A'
+			BEGIN
+			SET @count+=1
+		END
+	SET @i+=1
+	END
+SELECT @count
