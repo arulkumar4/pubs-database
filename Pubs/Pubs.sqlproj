@@ -123,7 +123,7 @@
     <Build Include="Scripts\Deril\2020_01_27.sql" />
     <Build Include="Scripts\Deril\2020_01_28.sql" />
     <Build Include="Scripts\Deril\2020_01_29.sql" />
-    <Build Include="Scripts\Deril\Day4.sql" />
+    <Build Include="Scripts\Deril\2020_01_30.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\Basaivii\2020_01_28.sql" />
