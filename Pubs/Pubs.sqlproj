@@ -124,6 +124,7 @@
     <Build Include="Scripts\Deril\2020_01_28.sql" />
     <Build Include="Scripts\Deril\2020_01_29.sql" />
     <Build Include="Scripts\Deril\2020_01_30.sql" />
+    <Build Include="Scripts\Deril\31_01_2020.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\Basaivii\2020_01_28.sql" />
