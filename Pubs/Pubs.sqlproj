@@ -64,6 +64,7 @@
     <Folder Include="dbo\Stored Procedures\" />
     <Folder Include="dbo\User Defined Types\" />
     <Folder Include="Scripts" />
+    <Folder Include="Scripts\Gayathri" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\authors.sql" />
@@ -115,5 +116,8 @@
     <Build Include="dbo\User Defined Types\empid.sql" />
     <Build Include="Scripts\Deril_Dynamic.sql" />
     <Build Include="Scripts\instpubs.sql" />
+    <Build Include="Scripts\Gayathri\%2827-01-20)_SQLQuery.sql" />
+    <Build Include="Scripts\Gayathri\%2828-01-20)_SQLQuery.sql" />
+    <Build Include="Scripts\Gayathri\%2830-01-20)_SQLQuery.sql" />
   </ItemGroup>
 </Project>
