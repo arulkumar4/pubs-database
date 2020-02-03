@@ -57,3 +57,62 @@ go
 
 
 EXEC Security.Verify_data 'password'
+
+
+
+-------------------------------------------------------
+
+--Improvements on encrioption
+
+---Creating table
+
+ CREATE TABLE 
+	Security.UserAccount1 (UserName varchar(100),
+						  U_PassWord BINARY(64) not null,
+						  passGIID uniqueidentifier ,
+						  CONSTRAINT pk_UserName1 PRIMARY KEY (UserName) )
+go
+
+-- creating procedure to Encrypy data along with GUID
+
+CREATE PROCEDURE Security.insert_Data1(@userName varchar(100) , @password varchar(50))
+AS
+
+DECLARE @salt UNIQUEIDENTIFIER=NEWID();
+
+INSERT INTO Security.UserAccount1 VALUES (@userName ,  HASHBYTES('SHA2_512', @password+CAST(@salt AS NVARCHAR(36))),@salt)
+GO
+
+EXEC Security.insert_Data1 'KB' , 'password'
+go
+
+SELECT * FROM Security.UserAccount1
+
+GO
+
+------Verify Password in db
+
+ALter PROCEDURE Security.Verify_data1(@username varchar(100), @password varchar(50))
+AS
+Declare @P_GUID nvarchar(100);
+SET @P_GUID= (SELECT passGIID from Security.UserAccount1 where UserName= @username )
+Declare @dupli int;
+set @dupli=(
+			SELECT 
+				 count (U_PassWord)
+				FROM  Security.UserAccount1  WHERE U_Password = HASHBYTES('SHA2_512', @password+cast(@P_GUID as nvarchar(36))
+				))
+
+if (@dupli>0)
+  BEGIN
+	PRINT  'true'
+	END 
+ELSE
+	BEGIN
+	PRINT 'FALSE'
+	END
+
+go
+
+
+EXEC Security.Verify_data1 'KB' , 'password'
