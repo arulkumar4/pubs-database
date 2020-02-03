@@ -64,6 +64,9 @@
     <Folder Include="dbo\Stored Procedures\" />
     <Folder Include="dbo\User Defined Types\" />
     <Folder Include="Scripts" />
+    <Folder Include="Scripts\Basaivii" />
+    <Folder Include="Scripts\Deril" />
+    <Folder Include="Scripts" />
     <Folder Include="Scripts\Gayathri" />
   </ItemGroup>
   <ItemGroup>
@@ -114,6 +117,18 @@
     <Build Include="dbo\User Defined Types\id.sql" />
     <Build Include="dbo\User Defined Types\tid.sql" />
     <Build Include="dbo\User Defined Types\empid.sql" />
+    <Build Include="Scripts\Deril_Dynamic.sql" />
+    <Build Include="Scripts\instpubs.sql" />
+    <Build Include="Scripts\Basaivii\2020_01_27.sql" />
+    <Build Include="Scripts\Basaivii\2020_01_28.sql" />    
+    <Build Include="Scripts\Basaivii\2020_01_29.sql" />
+    <Build Include="Scripts\Basaivii\2020_01_30.sql" />
+    <Build Include="Scripts\Basaivii\2020_01_31.sql" />
+    <Build Include="Scripts\Deril\2020_01_27.sql" />
+    <Build Include="Scripts\Deril\2020_01_28.sql" />
+    <Build Include="Scripts\Deril\2020_01_29.sql" />
+    <Build Include="Scripts\Deril\2020_01_30.sql" />
+    <Build Include="Scripts\Deril\31_01_2020.sql" />
     <Build Include="Scripts\Deril_Dynamic.sql" />
     <Build Include="Scripts\instpubs.sql" />
     <Build Include="Scripts\Gayathri\%2827-01-20)_SQLQuery.sql" />

@@ -1,16 +1,9 @@
-﻿select * from sales
+﻿--small app(generate guid) using stored procedure :
+--------------------------------
 
-DECLARE @table nvarchar(max)
-DECLARE @sql nvarchar(max)
-
-SET @table ='sales'
-SET @sql='SELECT * FROM ' + @table
-
-EXEC sp_executesql @sql
-
-EXEC sp_GetGuids 5, 1, 1, 0
-
-ALTER PROCEDURE sp_GetGuidss
+--one way:
+-----------
+ALTER PROCEDURE sp_GetGuids
 (
    @GuidCount INT,
    @IsUpper BIT,
@@ -73,9 +66,37 @@ end
 END
 
 EXEC sp_GetGuids 1,6,2,3 
+--------------------------------------------------------------------------
+--another way using temp table
+---------------------------
+ALTER PROCEDURE SmallApp(
+   @Count INT,
+   @IsUpper BIT = 1 ,
+   @IsBrace BIT = 0,
+   @IsHypen BIT = 1
+)
+AS
+BEGIN
+DECLARE @FinalIds TABLE (Id varchar(42))
+DECLARE @Iterator as INT=0
 
---CAST integer to varchar
-select CAST(7 AS nvarchar)+'-'
-select CAST(7 as decimal)/2
+WHILE(@Iterator<@Count)
+	BEGIN
+	INSERT INTO @FinalIds (Id) values (NEWID())
+	SET @Iterator+=1
+	END
 
-select '4'+4
+IF(@IsBrace)=1
+	UPDATE @FinalIds SET Id=CONCAT('{', Id, '}');
+
+
+IF(@IsHypen)=0
+	UPDATE @FinalIds SET Id=REPLACE(Id,'-','')
+
+SELECT IIF(@IsUpper = 1, UPPER(Id), LOWER(Id)) AS Id FROM @FinalIds;
+
+END
+GO
+
+exec SmallApp 1,1,1,0
+
