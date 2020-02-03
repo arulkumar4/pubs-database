@@ -120,7 +120,7 @@
     <Build Include="Scripts\Deril_Dynamic.sql" />
     <Build Include="Scripts\instpubs.sql" />
     <Build Include="Scripts\Basaivii\2020_01_27.sql" />
-    <Build Include="Scripts\Basaivii\2020_01_28.sql" />    
+    <Build Include="Scripts\Basaivii\2020_01_28.sql" />
     <Build Include="Scripts\Basaivii\2020_01_29.sql" />
     <Build Include="Scripts\Basaivii\2020_01_30.sql" />
     <Build Include="Scripts\Basaivii\2020_01_31.sql" />
@@ -136,5 +136,8 @@
     <Build Include="Scripts\Gayathri\%2830-01-20)_SQLQuery.sql" />
     <Build Include="Scripts\Gayathri\%2829-01-20)_SQLQuery.sql" />
     <Build Include="Scripts\Gayathri\%2831-01-20)_SQLQuery.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Scripts\Basaivii\2020_02_03.sql" />
   </ItemGroup>
 </Project>
