@@ -35,23 +35,13 @@ go
 
 CREATE PROCEDURE Security.Verify_data( @password varchar(50))
 AS
---SELECT IIF(U_Password = HASHBYTES('SHA2_256', @password),'Password Exists ', 'No mathes found') FROM  Security.UserAccount
---set Nocount on;
-	Declare @dupli int;
-	set @dupli=(
-	SELECT 
-        count (U_Password)
-			FROM  Security.UserAccount  WHERE U_Password = HASHBYTES('SHA2_256', @password)
-			)
+IF EXISTS (SELECT  U_Password FROM  Security.UserAccount  WHERE U_Password = HASHBYTES('SHA2_256', @password))
 
-	if (@dupli>0)
-	    BEGIN
-		PRINT  'true'
-		END 
-	ELSE
-		BEGIN
-		PRINT 'FALSE'
-		END
+	PRINT 'TRUE'
+ELSE
+    PRINT 'FALSE'
+go
+
 
 go
 
