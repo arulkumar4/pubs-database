@@ -145,5 +145,6 @@
     <None Include="Scripts\Arul\GetGuidList.sql" />
     <None Include="Scripts\Arul\SecuritySchema.sql" />
     <None Include="Scripts\Common\instpubs.sql" />
+    <None Include="Scripts\Basaivii\2020_02_06.sql" />
   </ItemGroup>
 </Project>
