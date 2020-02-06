@@ -143,5 +143,6 @@
   <ItemGroup>
     <None Include="Scripts\Basaivii\2020_02_03.sql" />
     <None Include="Scripts\Basaivii\2020_02_04.sql" />
+    <None Include="Scripts\Basaivii\2020_02_05_1.sql" />
   </ItemGroup>
 </Project>
