@@ -64,7 +64,9 @@
     <Folder Include="dbo\Stored Procedures\" />
     <Folder Include="dbo\User Defined Types\" />
     <Folder Include="Scripts" />
+    <Folder Include="Scripts\Arul" />
     <Folder Include="Scripts\Basaivii" />
+    <Folder Include="Scripts\Common" />
     <Folder Include="Scripts\Deril" />
     <Folder Include="Scripts" />
     <Folder Include="Scripts\Gayathri" />
@@ -140,5 +142,8 @@
     <None Include="Scripts\Basaivii\2020_02_03.sql" />
     <None Include="Scripts\Basaivii\2020_02_04.sql" />
     <None Include="Scripts\Basaivii\2020_02_05.sql" />
+    <None Include="Scripts\Arul\GetGuidList.sql" />
+    <None Include="Scripts\Arul\SecuritySchema.sql" />
+    <None Include="Scripts\Common\instpubs.sql" />
   </ItemGroup>
 </Project>
