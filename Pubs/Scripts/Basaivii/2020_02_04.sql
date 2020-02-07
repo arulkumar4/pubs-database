@@ -1,0 +1,47 @@
+﻿
+----Table valued function
+
+CREATE FUNCTION tb_FUN_EX(@NAME VARCHAR(50) , @ID INT)
+RETURNS @tb_FUN TABLE (name VARCHAR(50) , id INT)
+AS 
+BEGIN
+INSERT INTO @tb_FUN VALUES (@NAME,@ID)
+RETURN;
+END;
+
+SELECT * FROM tb_FUN_EX('BASIVII',55)
+
+go
+
+
+-------sp_executesql
+
+DECLARE @ExecStr NVARCHAR(400);
+SET @ExecStr = 'SELECT 10 as pprint';
+EXEC sp_executesql @ExecStr;
+
+
+
+--------WITH LOCK
+-- USER-1
+
+CREATE TABLE tb (ID VARCHAR(50))
+
+BEGIN TRAN
+INSERT INTO tb VALUES ('KK')
+
+
+
+-- USER-2
+
+SELECT * FROM tb
+
+--IT WILL NOT FINSH EXECUTION UNTILL USER -1  COMMITS HIS TRANSACTION , SO LOCK IS ON TB
+
+--ALTERNATIVELY DO 
+
+SELECT * FROM tb WITH(NOLOCK)
+
+
+
+
