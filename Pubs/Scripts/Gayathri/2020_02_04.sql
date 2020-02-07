@@ -21,17 +21,17 @@ TotalMarks INT
 --INSERTING VALUES INTO THE TABLE--
 
 	INSERT INTO [10th_StudentDetails].[Students_Score]
-	([StudentName],[STD],[English],[Tamil],[Maths],[Physics],[Chemistry],[Biology],[Computer]) 
-	SELECT 'Karthik','10th','97','84','87','76','89','93','78' UNION ALL
-	SELECT 'Gayathri','10th','86','78','71','96','84','86','90' UNION ALL
-	SELECT 'Sowmeya','10th','90','79','70','80','71','77','89' UNION ALL
-	SELECT 'Arav','10th','93','76','82','78','89','90','84' UNION ALL
-	SELECT 'Vishnu','10th','80','94','70','75','85','88','76' UNION ALL
-	SELECT 'Mounisha','10th','91','80','71','90','74','92','86' UNION ALL
-	SELECT 'Mounika','10th','83','85','96','86','71','93','82' UNION ALL
-	SELECT 'Dinesh','10th','95','79','99','82','93','78','99' UNION ALL
-	SELECT 'Sangeetha','10th','82','73','93','91','74','95','87' UNION ALL
-	SELECT 'Aakash','10th','72','97','70','85','81','91','85' 
+	([StudentName],[STD],[English],[Tamil],[Maths],[Physics],[Chemistry],[Biology],[Computer],[TotalMarks]) 
+	SELECT 'Karthik','10th','97','84','87','76','89','93','78','690' UNION ALL
+	SELECT 'Gayathri','10th','86','78','71','96','84','86','90','680' UNION ALL
+	SELECT 'Sowmeya','10th','90','79','70','80','71','77','89','678' UNION ALL
+	SELECT 'Arav','10th','93','76','82','78','89','90','84','580' UNION ALL
+	SELECT 'Vishnu','10th','80','94','70','75','85','88','76','580' UNION ALL
+	SELECT 'Mounisha','10th','91','80','71','90','74','92','86','679' UNION ALL
+	SELECT 'Mounika','10th','83','85','96','86','71','93','82','678' UNION ALL
+	SELECT 'Dinesh','10th','95','79','99','82','93','78','99','690' UNION ALL
+	SELECT 'Sangeetha','10th','82','73','93','91','74','95','87' ,'604'UNION ALL
+	SELECT 'Aakash','10th','72','97','70','85','81','91','85' ,'650'
 
 --INLINE TABLE VALUED FUCTION EXAMPLE--
 CREATE FUNCTION [10th_StudentDetails].[StudentMathsMark] 
