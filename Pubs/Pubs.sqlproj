@@ -151,5 +151,7 @@
     <None Include="Scripts\Arul\SecuritySchema.sql" />
     <None Include="Scripts\Common\instpubs.sql" />
     <None Include="Scripts\Basaivii\2020_02_06.sql" />
+    <None Include="Scripts\Basaivii\2020_02_07.sql" />
+    <None Include="Scripts\Basaivii\2020_02_08.sql" />
   </ItemGroup>
 </Project>
