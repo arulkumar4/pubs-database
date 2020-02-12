@@ -145,6 +145,7 @@
     <Build Include="Scripts\Gayathri\2020_02_05.sql" />
     <Build Include="Scripts\Gayathri\2020_02_06.sql" />
     <Build Include="Scripts\Gayathri\2020_02_07.sql" />
+    <Build Include="Scripts\Gayathri\2020_02_10.sql" />
     <Build Include="Scripts\Deril\2020_02_11.sql" />
   </ItemGroup>
   <ItemGroup>
@@ -157,6 +158,7 @@
     <None Include="Scripts\Basaivii\2020_02_06.sql" />
     <None Include="Scripts\Basaivii\2020_02_07.sql" />
     <None Include="Scripts\Basaivii\2020_02_08.sql" />
+    <None Include="Scripts\Gayathri\2020_02_11.sln" />
     <None Include="Scripts\Basaivii\2020_02_11.sql" />
   </ItemGroup>
 </Project>
